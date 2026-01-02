@@ -42,6 +42,7 @@ class Servico extends BuilderAbstract
     private $tributavel;
     private $responsavelRetencao;
     private $ibpt;
+    private $codigoNbs;
 
 
     public function setCnae($cnae)
@@ -225,12 +226,22 @@ class Servico extends BuilderAbstract
     {
         $this->tributavel = $tributavel;
     }
-
+    
     public function getTributavel()
     {
         return $this->tributavel;
     }
 
+    public function setCodigoNbs($codigoNbs)
+    {
+        $this->codigoNbs = $codigoNbs;
+    }
+    
+    public function getCodigoNbs()
+    {
+        return $this->codigoNbs;
+    }
+    
     public function setResponsavelRetencao($responsavelRetencao){
     if (!v::in([1,2])->validate($responsavelRetencao)) {
         throw new ValidationError(
@@ -280,6 +291,7 @@ class Servico extends BuilderAbstract
         $communication = $this->getCallApiInstance($configuration);
         return $communication->send('POST', '/nfse/servico', $this->toArray(true));
     }
+    
 
     public static function fromArray($data)
     {
