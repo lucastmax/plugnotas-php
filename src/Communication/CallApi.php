@@ -17,7 +17,7 @@ class CallApi
     {
         $this->client = new \GuzzleHttp\Client([
             'base_uri' => $configuration->getUrl(),
-            'timeout' => 10.0
+            'timeout' => 100.0
         ]);
         $this->headers = [
             'User-Agent' => 'plugnotas/1.0',
