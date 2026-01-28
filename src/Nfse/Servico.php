@@ -43,7 +43,7 @@ class Servico extends BuilderAbstract
     private $responsavelRetencao;
     private $ibpt;
     private $codigoNbs;
-
+    private $codigoServicoNacional;
 
     public function setCnae($cnae)
     {
@@ -242,6 +242,17 @@ class Servico extends BuilderAbstract
         return $this->codigoNbs;
     }
     
+    public function setCodigoServicoNacional($codigoServicoNacional)
+    {
+        $this->codigoServicoNacional = $codigoServicoNacional;
+    }
+
+    public function getCodigoServicoNacional()
+    {
+        return $this->codigoServicoNacional;
+    }
+
+
     public function setResponsavelRetencao($responsavelRetencao){
     if (!v::in([1,2])->validate($responsavelRetencao)) {
         throw new ValidationError(
