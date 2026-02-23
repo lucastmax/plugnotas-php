@@ -277,6 +277,8 @@ class Servico extends BuilderAbstract
         return $this->ibpt;
     }
 
+
+
     public function validate()
     {
         $data = $this->toArray();

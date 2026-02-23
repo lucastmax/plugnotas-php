@@ -157,6 +157,7 @@ class Nfse extends BuilderAbstract implements IDfe
         return $this->substituicao;
     }
 
+
     public function setTomador(Tomador $tomador)
     {
         $this->tomador = $tomador;
