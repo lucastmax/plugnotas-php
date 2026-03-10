@@ -16,6 +16,7 @@ use TecnoSpeed\Plugnotas\Nfse\Servico\Obra;
 use TecnoSpeed\Plugnotas\Nfse\Servico\Retencao;
 use TecnoSpeed\Plugnotas\Nfse\Servico\Valor;
 use TecnoSpeed\Plugnotas\Nfse\Servico\Ibpt;
+use TecnoSpeed\Plugnotas\Nfse\Servico\IbsCbs;
 use TecnoSpeed\Plugnotas\Traits\Communication;
 
 class Servico extends BuilderAbstract
@@ -44,6 +45,9 @@ class Servico extends BuilderAbstract
     private $ibpt;
     private $codigoNbs;
     private $codigoServicoNacional;
+    private $ibscbs;
+
+
 
     public function setCnae($cnae)
     {
@@ -277,7 +281,15 @@ class Servico extends BuilderAbstract
         return $this->ibpt;
     }
 
+    public function setIbsCbs(IbsCbs $ibscbs)
+    {
+        $this->ibscbs = $ibscbs;
+    }
 
+    public function getIbscbs()
+    {
+        return $this->ibscbs;
+    }
 
     public function validate()
     {

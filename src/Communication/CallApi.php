@@ -48,6 +48,7 @@ class CallApi
 
                 return ResponseObject::parse($response);
             }
+
             $response = $this->client->request(
                 $method,
                 $destination,
