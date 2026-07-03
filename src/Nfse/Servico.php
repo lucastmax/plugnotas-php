@@ -47,8 +47,6 @@ class Servico extends BuilderAbstract
     private $codigoServicoNacional;
     private $ibscbs;
 
-
-
     public function setCnae($cnae)
     {
         $this->cnae = $cnae;

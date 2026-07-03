@@ -17,6 +17,7 @@ class Retencao extends BuilderAbstract
     private $outrasRetencoes;
     private $pis;
     private $cpp;
+    private $tipoRetencaoPisCofinsCSLL ;
 
     public function setCofins(PisCofinsValorAliquota $cofins)
     {
@@ -86,6 +87,17 @@ class Retencao extends BuilderAbstract
     {
         return $this->cpp;
     }
+
+    public function setTipoRetencaoPisCofinsCSLL($tipoRetencaoPisCofinsCSLL)
+    {
+        $this->tipoRetencaoPisCofinsCSLL = $tipoRetencaoPisCofinsCSLL;
+    }
+
+    public function getTipoRetencaoPisCofinsCSLL()
+    {
+        return $this->tipoRetencaoPisCofinsCSLL;
+    }
+
     public static function fromArray($data)
     {
         $retencao = new Retencao();
