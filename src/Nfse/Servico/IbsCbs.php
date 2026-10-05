@@ -13,6 +13,17 @@ class IbsCbs extends BuilderAbstract
     private $OperacaoPessoal;
     private $pagamentoParceladoAntecipado;
     private $valores;
+    private $municipioIncidenciaIbsCbs;
+
+    public function setMunicipioIncidenciaIbsCbs($municipioIncidenciaIbsCbs)
+    {
+        $this->municipioIncidenciaIbsCbs = $municipioIncidenciaIbsCbs;
+    }
+
+    public function getMunicipioIncidenciaIbsCbs()
+    {
+        return $this->municipioIncidenciaIbsCbs;
+    }   
 
     public function setCodigoOperacao($codigoOperacao)
     {

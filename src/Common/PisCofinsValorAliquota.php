@@ -11,6 +11,7 @@ class PisCofinsValorAliquota extends BuilderAbstract
     private $aliquota;
     private $valor;
     private $cst;
+    private $baseCalculo;
 
     public function __construct($valor = 0, $aliquota = 0, $cst = 0)
     {
@@ -63,5 +64,19 @@ class PisCofinsValorAliquota extends BuilderAbstract
     {
         return $this->cst;
     }
-    
+
+    public function setBaseCalculo($baseCalculo)
+    {
+        if (!v::numeric()->validate($baseCalculo)) {
+            throw new ValidationError(
+                'Base de cálculo deve ser um número.'
+            );
+        }
+        $this->baseCalculo = $baseCalculo;
+    }
+
+    public function getBaseCalculo()
+    {
+        return $this->baseCalculo;
+    }
 }
