@@ -45,7 +45,8 @@ class Servico extends BuilderAbstract
     private $ibpt;
     private $codigoNbs;
     private $codigoServicoNacional;
-    private $ibscbs;
+    private $ibscbs;    
+    private $codigoContribuinte;
 
     public function setCnae($cnae)
     {
@@ -287,6 +288,16 @@ class Servico extends BuilderAbstract
     public function getIbscbs()
     {
         return $this->ibscbs;
+    }
+
+    public function setCodigoContribuinte($codigoContribuinte)
+    {
+        $this->codigoContribuinte = $codigoContribuinte;
+    }
+
+    public function getCodigoContribuinte()
+    {
+        return $this->codigoContribuinte;
     }
 
     public function validate()
